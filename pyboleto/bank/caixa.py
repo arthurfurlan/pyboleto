@@ -74,3 +74,9 @@ class BoletoCaixa( BoletoData ):
 
     def format_nosso_numero(self):
         return self._nosso_numero + '-' + str(self.dv_nosso_numero)
+
+    @property
+    def agencia_conta_cedente(self):
+        val = self.conta_cedente.split('-')
+        val[0] = val[0][-6:]
+        return "%s/%s" % (self.agencia_cedente, '-'.join(val))
