@@ -22,7 +22,7 @@ class BoletoCaixa( BoletoData ):
         '''
         self.inicio_nosso_numero = '80'
 
-    # Nosso numero (sem dv) sao 10 digitos
+    # Nosso numero (sem dv) sao 17 digitos
     def _nosso_numero_get(self):
         return self._nosso_numero
     '''
@@ -31,7 +31,7 @@ class BoletoCaixa( BoletoData ):
     def _nosso_numero_set(self, val):
         try:
             self._nosso_numero = self.inicio_nosso_numero + \
-                self.formata_numero(val, 8)
+                str(self.formata_numero(val, 15))
         except AttributeError:
             pass
 
@@ -72,3 +72,5 @@ class BoletoCaixa( BoletoData ):
         num = num.replace('X', str(dv), 1)
         return num
 
+    def format_nosso_numero(self):
+        return self._nosso_numero + '-' + str(self.dv_nosso_numero)
