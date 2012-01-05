@@ -13,6 +13,7 @@ class BoletoCaixa( BoletoData ):
         super(BoletoCaixa , self).__init__(*args, **kwargs)
 
         self.codigo_banco = "104"
+        self.local_pagamento = "Preferencialmente nas Casas Lotéricas e Agências da Caixa"
         self.logo_image_path = os.path.dirname(__file__) + \
             "/../media/logo_bancocaixa.jpg"
 
