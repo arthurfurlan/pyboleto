@@ -301,7 +301,7 @@ class BoletoPDF:
             valorDocumento 
         )
 
-        self.pdfCanvas.setFont('Courier', 9 )
+        self.pdfCanvas.setFont('Helvetica', 9 )
         demonstrativo = boletoDados.demonstrativo[0:25]
         for i in range(len(demonstrativo)):
             self.pdfCanvas.drawString( 
@@ -426,10 +426,10 @@ class BoletoPDF:
         self.pdfCanvas.drawString(
             0, 
             y + self.deltaTitle, 
-            'Instruções' 
+            'Instruções (texto de responsabilidade do cedente)' 
         )
 
-        self.pdfCanvas.setFont('Helvetica', self.fontSizeValue )
+        self.pdfCanvas.setFont('Helvetica', 9)
         instrucoes = boletoDados.instrucoes
         for i in range(len(instrucoes)):
             self.pdfCanvas.drawString( 
@@ -659,7 +659,7 @@ class BoletoPDF:
             y + 2*self.space, 
             boletoDados.codigo_dv_banco 
         )
-        self.pdfCanvas.setFont('Helvetica-Bold', 10 )
+        self.pdfCanvas.setFont('Helvetica-Bold', 11)
         self.pdfCanvas.drawRightString(
             self.width, 
             y + 2*self.space, 
