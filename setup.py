@@ -10,9 +10,9 @@ setup(
     packages = find_packages(),
     include_package_data = True,
     zip_safe = False,
-    install_requires = [
-        'reportlab>=2.5',
-    ],
+    #install_requires = [
+    #    'reportlab>=2.5',
+    #],
     provides = [
         'pyboleto'
     ],
