@@ -740,7 +740,8 @@ class BoletoPDF:
         altura  = 13 * mm
         comprimento = 103 * mm
 
-        tracoFino = 0.254320987654 * mm #Tamanho correto aproximado
+        #tracoFino = 0.254320987654 * mm #Tamanho correto aproximado
+        tracoFino = 0.3 * mm #Tamanho correto aproximado
         
         bc = I2of5(num, 
             barWidth = tracoFino, 
